@@ -1,104 +1,76 @@
-# 🚪 ITIDoorz - Room & Lab Booking System
+# 🚪 ITIDoorz - Campus Facility Booking System
 
-**ITIDoorz** is a modern web application designed to streamline classroom and laboratory booking management at **Institut Teknologi Indonesia (ITI)**. This system enables students to easily reserve rooms and assists administrators in managing schedules and facility usage reports efficiently.
+![ITIDoorz Hero Image](docs/image/admin-dashboard.png) 
+**ITIDoorz** is a modern, full-stack web application designed to streamline the scheduling and management of classrooms and laboratories at **Institut Teknologi Indonesia (ITI)**. 
+
+Built to solve scheduling conflicts, it empowers students and lecturers to easily book facilities while providing administrators with powerful tools for oversight, approval workflows, and usage reporting.
 
 ---
 
 ## 🛠️ Tech Stack
 
-This project is built using modern technologies for optimal performance and ease of development.
+Engineered with performance and scalability in mind using industry-standard technologies.
 
 ### Backend (Server-side)
-
-- **Language:** [Go (Golang)](https://go.dev/)
-- **Framework:** Gin Gonic
-- **Database:** MySQL
-- **ORM/Driver:** SQLX
-- **Auth:** JWT & Bcrypt
-- **Docs:** Swagger (Swaggo)
+- **Language:** [Go (Golang)](https://go.dev/) - Chosen for high performance and concurrency.
+- **Framework:** [Gin Gonic](https://gin-gonic.com/) - Fast HTTP web framework.
+- **Database:** MySQL - Relational data management.
+- **ORM/Driver:** SQLX - Secure and efficient database extensions.
+- **Security:** JWT (JSON Web Tokens) & Bcrypt for secure authentication.
+- **Documentation:** Swagger (Swaggo) - Interactive API docs.
 
 ### Frontend (Client-side)
-
-- **Framework:** [Vue.js 3](https://vuejs.org/) (Composition API)
-- **Styling:** Tailwind CSS (Fully Responsive)
-- **UI Components:** PrimeIcons
-- **Charts:** Chart.js (Dashboard Statistics)
+- **Framework:** [Vue.js 3](https://vuejs.org/) (Composition API) - For a reactive user interface.
+- **Styling:** Tailwind CSS - Utility-first CSS for rapid, responsive design.
+- **State Management:** Vue Reactivity API.
+- **Visualization:** Chart.js - Data visualization for admin analytics.
+- **HTTP Client:** Axios - For seamless API integration.
 
 ---
 
 ## ✨ Key Features
 
-### 👤 User Panel
+### 🛡️ Admin Dashboard (The Control Center)
+- **Visual Analytics:** Monthly room usage statistics visualized with interactive charts.
+- **Inventory Control:** Complete CRUD (Create, Read, Update, Delete) for room management.
+- **User Management:** Administer accounts for Admins and Users with secure role-based access.
+- **Approval Workflow:** Review incoming booking requests and take action (**Approve** or **Reject**) instantly.
+- **Report Generator:** Export detailed usage reports to **CSV** & **JSON** for offline analysis.
 
-- **Real-time Availability:** Check room availability instantly.
-- **Booking Form:** Submit booking requests for classrooms or laboratories.
+### 👤 User Panel (Lecturers & Staff)
+- **Real-time Catalog:** Browse available rooms with capacity and facility details.
+- **Instant Booking:** Submit reservation requests with specific dates and times.
+- **Status Tracking:** Monitor the status of booking requests (Pending/Approved/Rejected).
 
-### 🛡️ Admin Dashboard
-
-- **Statistics:** Visual monthly room usage charts.
-- **Inventory Management:** Add, edit, and delete room data.
-- **User Management:** Full CRUD capabilities to manage system users (Admins, Lecturers, Students).
-- **Approval System:** Feature to **Approve** or **Reject** booking requests.
-- **Report Generator:** Export monthly statistical reports to **CSV** & **JSON** formats.
-
-### 🎨 UI & UX Highlights
-
-- **📱 Mobile-First Experience:** The Dashboard and User Panel layouts automatically adapt to Mobile, Tablet, and Desktop screens for a seamless experience.
-- **🍔 Adaptive Sidebar:** The Admin sidebar now utilizes a Drawer/Overlay system on mobile with a Hamburger Menu, while remaining sticky on desktop.
-- **📊 Smart Grids:** Statistic cards (StatCards) intelligently stack vertically (1 column) on mobile devices and expand horizontally (3-4 columns) on desktops.
-- **↔️ Responsive Tables:** Data tables for Bookings and Rooms now support horizontal scrolling to ensure data integrity on smaller screens.
-- **👆 Optimized Components:** Navbars, Modals, and Form Inputs have been fine-tuned with appropriate padding and sizing for optimal touch interaction.
+### 🎨 UX/UI Excellence
+- **📱 Mobile-First Design:** Optimized for touchscreens. Stat cards stack vertically on mobile and expand on desktop.
+- **🍔 Adaptive Navigation:** Features a drawer menu on mobile and a sticky sidebar on desktop screens.
+- **⚡ Reactive Feedback:** Instant form validation, loading states, and toast notifications for user actions.
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Preview
 
-|                  Admin Dashboard                   |                  User Dashboard                  |
-| :------------------------------------------------: | :----------------------------------------------: |
-| ![Admin Dashboard](docs/image/admin-dashboard.png) | ![User Dashboard](docs/image/user-dashboard.png) |
+| Login Page | Admin Dashboard (Desktop) |
+| :---: | :---: |
+| ![Login Page](docs/image/login-preview.png) | ![Admin Dashboard](docs/image/admin-dashboard.png) |
 
-### Optimized for all devices
-
-This application has been optimized for various devices, ensuring a seamless user experience on mobile phones, tablets, and desktops.
+| User Booking Catalog | Mobile Responsive View |
+| :---: | :---: |
+| ![User Dashboard](docs/image/user-dashboard.png) | ![Mobile View](docs/image/mobile-view.png) |
 
 ---
 
 ## 🚀 Installation & Setup
 
-### 1. Clone Repository
+Follow these steps to run the project locally.
 
+### Prerequisites
+- Go 1.20+
+- Node.js & npm
+- MySQL Server
+
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/MuhammadZaidan1/booking-system-go-vue.git
+git clone [https://github.com/MuhammadZaidan1/booking-system-go-vue.git](https://github.com/MuhammadZaidan1/booking-system-go-vue.git)
 cd booking-system-go-vue
-```
-
-### 2. Database Setup
-
-Import the `database.sql` file into your local MySQL database.
-
-### 3. Backend Setup
-
-```bash
-cd backend
-go mod tidy
-go run main.go
-```
-
-> The Backend will run on port **8080**.
-
-### 4. Frontend Setup
-
-```bash
-cd front-end
-npm install
-npm run dev
-```
-
-> The Frontend will run on port **5173**.
-
----
-
-## 📖 API Documentation
-
-Complete and interactive API documentation is available via Swagger UI.
-Access at: **http://localhost:8080/swagger/index.html**

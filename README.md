@@ -70,22 +70,22 @@ Follow these steps to run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/MuhammadZaidan1/booking-system-go-vue.git](https://github.com/MuhammadZaidan1/booking-system-go-vue.git)
+git clone https://github.com/MuhammadZaidan1/booking-system-go-vue.git
 cd booking-system-go-vue
 ```
 
 ### 2. Database Setup
 
 1. Open your MySQL client (phpMyAdmin, Workbench, or Terminal).
-2. Create a new database named `itidoorz_db` (or whatever you prefer).
-3. Import the SQL schema file located in `/database/itidoorz.sql` (if available) or run the migration script.
+2. Create a new database named `iti_room_booking` (or whatever you prefer).
+3. Import the SQL schema file `database.sql` and run it.
 
 ### 3. Backend Configuration (Go)
 
 Navigate to the backend directory and set up the environment variables.
 
 ```bash
-cd backend
+cd backend-go
 go mod tidy
 cp .env.example .env
 ```
@@ -101,7 +101,7 @@ go run main.go
 Open a new terminal and navigate to the frontend directory.
 
 ```bash
-cd frontend-go
+cd frontend-vue
 npm install
 npm run dev
 ```
@@ -134,4 +134,4 @@ Once the backend is running, you can access the Swagger documentation to explore
 
 |                   Report Generator                   |           Mobile Responsive View           |
 | :--------------------------------------------------: | :----------------------------------------: |
-| ![Report Generator](docs/image/report-Generator.png) | ![Mobile View](docs/image/mobile-view.png) |
+| ![Report Generator](docs/image/report-generator.png) | ![Mobile View](docs/image/mobile-view.png) |
